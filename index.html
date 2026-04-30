@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Стелаж М-56 — VAYS</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--cream:#F7F4EF;--sand:#E8E2D9;--dark:#1C1A17;--mid:#5C5650;--accent:#8B6F4E;--accent-light:#C4A882;--white:#FDFCFA;}
 html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);line-height:1.6;}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--dark);line-height:1.6;}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 4rem;background:rgba(247,244,239,0.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(139,111,78,0.15);}
@@ -35,7 +35,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .color-swatch.active::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1.5px solid var(--accent);}
 .color-name-display{font-size:.85rem;color:var(--dark);font-weight:500;margin-left:.5rem;}
 .hero-actions{display:flex;gap:1rem;align-items:center;}
-.btn-primary{background:var(--dark);color:var(--cream);padding:.9rem 2.2rem;border-radius:2px;font-size:.88rem;letter-spacing:.06em;text-decoration:none;transition:background .2s;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;display:inline-block;}
+.btn-primary{background:var(--dark);color:var(--cream);padding:.9rem 2.2rem;border-radius:2px;font-size:.88rem;letter-spacing:.06em;text-decoration:none;transition:background .2s;border:none;cursor:pointer;font-family:'Inter',sans-serif;display:inline-block;}
 .btn-primary:hover{background:var(--accent);}
 .btn-ghost{color:var(--mid);font-size:.88rem;text-decoration:none;letter-spacing:.04em;display:flex;align-items:center;gap:.4rem;transition:color .2s;}
 .btn-ghost:hover{color:var(--dark);}
@@ -112,9 +112,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .order-form{display:flex;flex-direction:column;gap:1rem;}
 .form-group{display:flex;flex-direction:column;gap:.4rem;}
 .form-label{font-size:.72rem;letter-spacing:.08em;color:var(--mid);text-transform:uppercase;}
-.form-input{padding:.85rem 1rem;background:var(--white);border:1px solid #ddd;border-radius:2px;font-family:'DM Sans',sans-serif;font-size:.92rem;color:var(--dark);outline:none;transition:border-color .2s;width:100%;}
+.form-input{padding:.85rem 1rem;background:var(--white);border:1px solid #ddd;border-radius:2px;font-family:'Inter',sans-serif;font-size:.92rem;color:var(--dark);outline:none;transition:border-color .2s;width:100%;}
 .form-input:focus{border-color:var(--accent);}
-.form-submit{background:var(--accent);color:var(--cream);padding:1.05rem;border:none;border-radius:2px;font-family:'DM Sans',sans-serif;font-size:1rem;letter-spacing:.05em;cursor:pointer;transition:background .2s;margin-top:.25rem;width:100%;}
+.form-submit{background:var(--accent);color:var(--cream);padding:1.05rem;border:none;border-radius:2px;font-family:'Inter',sans-serif;font-size:1rem;letter-spacing:.05em;cursor:pointer;transition:background .2s;margin-top:.25rem;width:100%;}
 .form-submit:hover{background:var(--dark);}
 
 footer{background:var(--dark);color:rgba(247,244,239,.5);padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;}
@@ -169,11 +169,16 @@ footer{background:var(--dark);color:rgba(247,244,239,.5);padding:2rem 4rem;displ
       <span class="color-name-display" id="colorName">Білий</span>
     </div>
 
+    <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:1.25rem;">
+      <span style="font-size:2.6rem;font-weight:600;color:var(--dark);">1 899 ₴</span>
+      <span style="font-size:1rem;color:var(--mid);text-decoration:line-through;">2 599 ₴</span>
+      <span style="font-size:.75rem;background:var(--accent);color:var(--cream);padding:.2rem .6rem;border-radius:2px;letter-spacing:.05em;">−27%</span>
+    </div>
     <div class="hero-actions">
       <a href="#order" class="btn-primary">Встигни замовити зі знижкою →</a>
       <a href="#specs" class="btn-ghost">Характеристики →</a>
     </div>
-    <p style="font-size:.8rem;color:var(--accent);margin-top:.75rem;letter-spacing:.04em;">⚡ Кількість обмежена — діє знижка −27%</p>
+    <p style="font-size:.8rem;color:var(--accent);margin-top:.75rem;letter-spacing:.04em;">⚡ Кількість обмежена — знижка діє до кінця тижня</p>
     <div class="hero-stats">
       <div><div class="stat-num">4.9★</div><div class="stat-label">Рейтинг (22 відгуки)</div></div>
       <div><div class="stat-num">240+</div><div class="stat-label">Продано</div></div>
@@ -291,7 +296,7 @@ footer{background:var(--dark);color:rgba(247,244,239,.5);padding:2rem 4rem;displ
 <div style="background:var(--accent);padding:2.5rem 4rem;text-align:center;">
   <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;color:var(--cream);margin-bottom:.75rem;">Кількість обмежена — залишилось кілька штук</p>
   <p style="font-size:.9rem;color:rgba(247,244,239,.8);margin-bottom:1.5rem;">Ціна 1 899 ₴ діє лише до кінця тижня. Не пропусти знижку −27%</p>
-  <a href="#order" style="background:var(--cream);color:var(--accent);padding:.9rem 2.5rem;border-radius:2px;font-size:.9rem;letter-spacing:.06em;text-decoration:none;font-family:'DM Sans',sans-serif;">Встигни замовити зі знижкою →</a>
+  <a href="#order" style="background:var(--cream);color:var(--accent);padding:.9rem 2.5rem;border-radius:2px;font-size:.9rem;letter-spacing:.06em;text-decoration:none;font-family:'Inter',sans-serif;">Встигни замовити зі знижкою →</a>
 </div>
 
 <!-- ═══════════════════════════════════ REVIEWS -->
