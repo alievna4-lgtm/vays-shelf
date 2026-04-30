@@ -429,26 +429,13 @@ async function sendOrder() {
   msg.style.color = 'var(--accent)';
   msg.textContent = 'Надсилаємо...';
 
-  const LP_CRM_URL = 'https://glumurge.lp-crm.biz/api/addNewOrder.html';
-  const LP_CRM_KEY = 'd2ac52bfb1933128d7b0f9993f413588';
-
-  const isPhone = /^\+?[\d\s\-()]{7,}$/.test(contact);
-
-  // Формуємо параметри як того вимагає LP-CRM API
-  const params = new URLSearchParams();
-  params.append('key',        LP_CRM_KEY);
-  params.append('order_id',   Date.now().toString());
-  params.append('country',    'UA');
-  params.append('bayer_name', name);
-  params.append('phone',      isPhone ? contact : '');
-  params.append('email',      isPhone ? '' : contact);
-  params.append('products',   JSON.stringify([{product_id: '1', price: '1899', count: '1'}]));
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzmxw91LZlEDmhCic8TXGZh8hjcH0oUVDB1C_D201-Y_xILc6kByZeNdWwyIokQ2zIrOw/exec';
 
   try {
-    const res = await fetch(LP_CRM_URL, {
-      method:  'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body:    params.toString(),
+    const res = await fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, contact }),
     });
     if (res.ok) {
       msg.style.color = '#27ae60';
