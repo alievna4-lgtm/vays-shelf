@@ -423,12 +423,12 @@ async function sendOrder() {
   msg.style.color = 'var(--accent)';
   msg.textContent = 'Надсилаємо...';
 
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw-f3Fh-94atjVIcZlBCZNJSdttouoB4ExPtvOnHlX97s0UFUqZe5TnA0JTymlXno66Cg/exec';
+  const FORMSPREE_URL = 'https://formspree.io/f/xvzlorgy';
 
   try {
-    const res = await fetch(GOOGLE_SCRIPT_URL, {
+    const res = await fetch(FORMSPREE_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ name, contact }),
     });
     if (res.ok) {
